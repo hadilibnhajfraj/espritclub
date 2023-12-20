@@ -1,0 +1,27 @@
+<h1> la list des voiture est :</h1>
+{#{% set somme = 0 %}#}
+<table border="3" >
+    <tr>
+        <th>Id</th>
+        <th>Matricule</th>
+          <th>Marque</th>
+            <th>Vitesse</th>
+        
+    </tr>
+    {% for i in voitures %}
+    
+    <tr>
+        <td>{{i.id}}</td>
+         <td>{{i.matricule}}</td>
+          <td>{{i.marque}}</td>
+        <td>{{i.vitesse}}</td>
+        <td><form action = "{{path('SuprrimerV',{'id':i.id}) }}">
+        <button>Supprimer</button></form>
+       {# <td><form action = "{{path('detailV',{'vitesse':i.vitesse,'puissance':i.puissance}) }}">  #} {# creation button#}
+        {#<button>Participer</button></form>#}
+         {#<a href="{{path('detailV', {'vitesse':i.vitesse,'puissance':i.puissance}) }}">Participer </a> </td>#}
+    </tr>
+    {#{% set somme = somme + i.id %}#}
+   
+    {% endfor %}
+</table>

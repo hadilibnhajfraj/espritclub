@@ -1,0 +1,26 @@
+<h1> Table Classroom</h1>
+
+<table border="3">
+    <tr>
+        <th>ID</th>
+        <th>Nom</th>
+        <th>Supprimer</th>
+        <th>Modiffier</th>
+            
+        
+    </tr>
+    {% for i in classroom %}
+    {#{% if 'theorique' in i.Description %}#}
+    <tr>
+         <td>{{i.id}}</td>
+        <td>{{i.nom}}</td>
+        <td><form action="{{path('SupprimerC',{'id':i.id}) }}">    {# creation button#}
+         <button>Delete</button></form></td>
+        <td><form action="{{path('ModiffierC',{'id':i.id}) }}">   {# creation button#}
+         <button>Modiffier</button></form></td>
+    </tr>
+    {#{% endif %}#}
+    {% endfor %}
+</table>
+
+

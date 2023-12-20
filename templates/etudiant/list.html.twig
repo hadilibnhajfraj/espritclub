@@ -1,0 +1,25 @@
+<h1> Table student </h1>
+
+<table border="3">
+    <tr>
+        <th>NSC</th>
+        <th>EMAIL</th>
+        <th>Classe</th>
+      
+            
+        
+    </tr>
+    {% for student in student %}
+    {#{% if 'theorique' in i.Description %}#}
+    <tr>
+         <td>{{student.nsc}}</td>
+        <td>{{student.email}}</td>
+        <td>{{student.idClassroom.id}}</td>
+       
+       
+    </tr>
+    {#{% endif %}#}
+    {% endfor %}
+</table>
+
+
